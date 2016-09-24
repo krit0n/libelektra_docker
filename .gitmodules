@@ -1,0 +1,6 @@
+[submodule "libelektra"]
+	path = libelektra
+	url = https://github.com/krit0n/libelektra.git
+[submodule "swig"]
+	path = dockerimage/swig
+	url = https://github.com/swig/swig.git
