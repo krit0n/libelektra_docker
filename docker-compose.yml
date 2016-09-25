@@ -2,6 +2,6 @@ version: '2'
 services:
   elektra:
     build: ./dockerimage
-    image: elektra/elektra
+    image: krit0n/elektra
     volumes:
       - ./libelektra:/libelektra
