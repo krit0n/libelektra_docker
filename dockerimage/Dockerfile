@@ -6,6 +6,7 @@ RUN apt-get -qq update && apt-get -qq -y install \
     autotools-dev \
     automake \
     cmake \
+    cmake-data \
     pkg-config \
     libpcre3 \
     libpcre3-dev \
@@ -15,6 +16,7 @@ RUN apt-get -qq update && apt-get -qq -y install \
     apt-transport-https
 
 # Get node
+#RUN apt-get -qq -y install nodejs nodejs-dev
 ADD nodesource.gpg.key /tmp/nodesource.gpg.key
 ADD nodesource.list /etc/apt/sources.list.d/nodesource.list
 RUN apt-key add /tmp/nodesource.gpg.key && apt-get -qq update && \
