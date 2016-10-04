@@ -2,11 +2,12 @@ FROM debian:jessie
 
 RUN apt-get -qq update && apt-get -qq -y install \
     build-essential \
-    cmake \
+    valgrind \
     autotools-dev \
     automake \
     cmake \
     cmake-data \
+    cmake-curses-gui \
     pkg-config \
     libpcre3 \
     libpcre3-dev \
