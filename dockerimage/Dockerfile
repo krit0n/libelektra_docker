@@ -31,3 +31,5 @@ RUN cd /tmp/swig && ./autogen.sh && ./configure && make && make install && cd -
 # Housekeeping
 RUN apt-get autoremove -qq -y \
     && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
+
+ENV LD_LIBRARY_PATH /usr/local/lib

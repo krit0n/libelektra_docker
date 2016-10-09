@@ -5,3 +5,4 @@ services:
     image: krit0n/elektra
     volumes:
       - ./libelektra:/libelektra
+      - ./node-kdb:/node-kdb
