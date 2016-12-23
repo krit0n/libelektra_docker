@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ubuntu:xenial
 
 RUN apt-get -qq update && apt-get -qq -y install \
     build-essential \
@@ -25,8 +25,8 @@ RUN apt-key add /tmp/nodesource.gpg.key && apt-get -qq update && \
     npm install -g node-gyp
 
 # Get Swig
-ADD swig /tmp/swig
-RUN cd /tmp/swig && ./autogen.sh && ./configure && make && make install && cd -
+ADD https://codeload.github.com/swig/swig/tar.gz/rel-3.0.10 /tmp/swig.tar.gz
+RUN cd /tmp && tar xzf swig.tar.gz && cd swig-rel-3.0.10 && ./autogen.sh && ./configure && make && make install
 
 # Housekeeping
 RUN apt-get autoremove -qq -y \
