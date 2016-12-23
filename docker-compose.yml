@@ -4,5 +4,6 @@ services:
     build: ./dockerimage
     image: krit0n/elektra
     volumes:
-      - ./libelektra:/libelektra
-      - ./node-kdb:/node-kdb
+      - ./libelektra:/root/libelektra
+      - ./build:/root/build
+      - ./node-kdb:/root/node-kdb
