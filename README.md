@@ -13,7 +13,7 @@ $ docker-compose run elektra
 ```
 Build and install libelektra inside the docker container
 ```sh
-$ cd /root/build && cmake ../libelektra
+$ cd /root/build && cmake ../libelektra -DCMAKE_INSTALL_PREFIX=/usr
 $ make && make install
 ```
 
@@ -22,7 +22,7 @@ The binding is inside ./node-kdb which is mapped to /node-kdb inside the contain
 When inside the container build this binding with following commands:
 ```sh
 $ cd /root/node-kdb
-$ swig -c++ -javascript -node -I/usr/local/include kdb.i
+$ swig -c++ -javascript -node -I/usr/include/elektra kdb.i
 $ node-gyp configure build
 ```
 

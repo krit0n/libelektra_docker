@@ -3,7 +3,7 @@
     {
       "target_name": "kdb",
       "sources": [ "kdb_wrap.cxx" ],
-      "include_dirs": [ "/usr/local/include", "/usr/local/include/elektra" ],
+      "include_dirs": [ "/usr/include", "/usr/include/elektra" ],
       "libraries": [ "-L/usr/local/lib", "-lelektra-kdb" ],
       "conditions": [
         [ 'OS=="mac"',
